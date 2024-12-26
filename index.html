@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="בניית אתרים מקצועית במחירים נוחים, עם עיצוב מותאם אישית לצרכים שלך. קבל אתר מעוצב ברמה גבוהה ובמחיר משתלם!">
+    <meta name="keywords" content="בניית אתרים, עיצוב אתרים, אתרים מקצועיים, מחירים נוחים, פיתוח אתרים">
+
+    <title>אסתר- בניית אתרים ברמה הכי מקצועית שיש ובמחיר בדיחה!</title>
+</head>
+<body>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #111111;
+    font-family: 'Open Sans';
+    box-sizing: border-box; /* הוספת box-sizing */
+}
+
+nav {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.975);
+    padding: 5px 40px; /* מרווח מהצדדים */
+    box-sizing: border-box; /* הוספת box-sizing */
+}
+nav img {
+    width: 50px;
+    height: auto;
+    margin-left: 5%;
+}
+nav ul{
+    gap: 2em;
+    display: flex;
+    list-style: none;
+    text-align: right;
+}
+nav ul a{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2em;
+    letter-spacing: 0.02em;
+    color: #ffac80;
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+}
+nav ul a:hover{
+    color: #ffffff;
+}
+nav button{
+    background-color: #ffac80; /* Lighter shade on hover */
+    color: #fff;
+    cursor: pointer;
+    width: 135px;
+    height: 45px;
+    left: 5%;
+    top: 5%;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.02em;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s ease;
+}
+nav button:hover{
+    background-color: #ffffff00; /* Lighter shade on hover */
+    color: #ffffff;
+    border: solid #ffac80;
+    transform: scale(1.1);
+}
+.home {
+    position: relative;
+}
+.home h1 {
+    text-align: right;
+    position: relative;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 74px;
+    line-height: 100px;
+    width: 35%;
+    left: 50%;
+    top: 80px;
+    text-align: right;  
+    color: #FFFFFF;  
+    text-shadow: 0px 0px 11.9px rgba(255, 255, 255, 0.25);
+}
+.home p {
+    position: relative;
+    left: 60%;
+    top: 35px;
+    width: 25%;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18.5px;
+    line-height: 33px;
+    text-align: right;
+    letter-spacing: 0.12em;
+    color: #FFFFFF;
+}
+.home img {
+    display: inline-flex;
+    position: absolute;
+    top: 18%;
+    left: 17%;
+    width: 45vh;
+}
+.home button {
+    position: relative; /* הוסיפי את זה */
+    background-color: #ffac80;
+    color: #fff;
+    cursor: pointer;
+    width: 135px;
+    height: 45px;
+    left: 78%; /* יפעל כעת */
+    top: 48px; /* יפעל כעת */
+    border: none;
+    border-radius: 50px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.02em;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s ease;
+}
+
+.home button:hover{
+    background-color: #ffffff00; /* Lighter shade on hover */
+    color: #ffffff;
+    border: solid #ffac80;
+    transform: scale(1.1);
+}
+.about{
+    margin: 10% 0;
+    justify-items: center;
+}
+.about h1 {
+    justify-items: center;
+    position: relative;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 70px;
+    text-align: center;
+    width: 35%; 
+    color: #FFFFFF;  
+    text-shadow: 0px 0px 11.9px rgba(255, 255, 255, 0.25);
+}
+.about p {
+    width: 30%;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 65px;
+    margin-right: 15%;
+    margin-top: 5%;
+    justify-self: right;
+    text-align: right;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+}
+
+
+
+
+
+.why-us-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.why-us-section h1 {
+
+    position: relative;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 70px;
+    margin-bottom: 2em;
+    color: #FFFFFF;  
+    text-shadow: 0px 0px 11.9px rgba(255, 255, 255, 0.25);
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  text-align: center;
+  max-width: 200px;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  color: #ffffff;
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.feature p {
+  font-size: 15.5px;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.icon img {
+    width: 80px;
+    filter: drop-shadow(0px 0px 70px #FFFFFF);
+
+}
+
+
+#cards-container-h1 {
+    position: relative;
+    font-family: 'Open Sans';
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+    font-size: 70px;
+    margin-top: 3em;
+    color: #FFFFFF;  
+    text-shadow: 0px 0px 11.9px rgba(255, 255, 255, 0.25);
+}
+
+.cards-container {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.card {
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    border: #ffa07a solid 2px;
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.25);
+}
+.iconn img {
+    width: 140px;
+    height: auto;
+    margin-top: 40px;
+}
+.card h3 {
+    color: #ffa07a;
+    margin: 15px 0 10px;
+    font-size: 30px;
+}
+.card p {
+    color: #ffffff;
+    font-size: 15.5px;
+    letter-spacing: 0.06em;
+    margin: 0;
+}
+
+#p-h1 {
+    position: relative;
+    font-family: 'Open Sans';
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+    font-size: 70px;
+    margin-top: 3em;
+    color: #FFFFFF;  
+    text-shadow: 0px 0px 11.9px rgba(255, 255, 255, 0.25);
+}
+.portfolio {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.theP {
+    width: 63vh; /* גודל הקונטיינר */
+    height: auto; /* להתאים לגובה התמונה */
+    overflow: hidden; /* חותך את התמונה המוגדלת */
+    border-radius: 15px;
+
+    border: #ffa07a solid 2px;
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.25);
+    margin-top: 40px;
+}
+
+.theP img {
+    display: block; /* הופך את התמונה לבלוק ומסיר מרווחים מיותרים */
+    width: 100%; /* ממלא את המסגרת ברוחב */
+    height: 100%; /* ממלא את המסגרת בגובה */
+    object-fit: cover; /* ממלא את המסגרת תוך שמירה על פרופורציות */
+    transition: transform 0.3s ease; /* אנימציה חלקה */
+}
+
+
+.theP:hover img {
+    transform: scale(1.1); /* זום-אין על התמונה */
+} 
+
+#faq-h1 {
+    position: relative;
+    font-family: 'Open Sans';
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+    font-size: 70px;
+    margin-top: 3em;
+    color: #FFFFFF;  
+    text-shadow: 0px 0px 11.9px rgba(255, 255, 255, 0.25);
+} 
+
+
+.faq {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px; /* גבול לרוחב הכולל */
+    margin-left: auto;
+    margin-right: auto; /* ממקם במרכז */
+}
+
+.faq-item {
+    background-color: #1F1F1F;
+    border-radius: 15px; /* עיצוב גבולות מעוגל */
+    border: #E3A57F solid 2px; /* גבול לבן */
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.25); /* צל */
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #fff;
+}
+
+.plus {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #fff;
+    transition: transform 0.3s ease; /* אנימציה למעבר */
+}
+
+.faq-answer {
+    display: block;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    text-align: right;
+    padding: 0 30px 0px; /* פדינג רק בצדדים ובחלק התחתון */
+    max-height: 0; /* מתחיל בגובה 0 */
+    overflow: hidden; /* חוסם תוכן יצא מגבולות */
+    transition: max-height 0.2s ease-out, padding 0.2s ease-out; /* אפקט אנימציה חלק */
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px; /* גובה מרבי לפתיחה */
+    padding: 0 30px 15px; /* פדינג נוסף כשנפתחת התשובה */
+}
+
+.faq-item.active .plus {
+    content: "×"; /* הופך את הפלוס לאיקס */
+    transform: rotate(45deg); /* הופך את הפלוס לאיקס */
+}
+
+/*slider*/
+        /* עיצוב הסליידר */
+#testimonials-slider-h1 {
+    position: relative;
+    font-family: 'Open Sans';
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+    font-size: 70px;
+    margin-top: 3.5em;
+    color: #FFFFFF;  
+    text-shadow: 0px 0px 11.9px rgba(255, 255, 255, 0.25);
+}
+
+.testimonials-slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 300px; /* הוספת גובה לסליידר */
+    margin: 0 auto;
+    margin: 5% auto 0; /* מרווח מלמעלה ומרכז את הסליידר */
+    overflow: hidden; /* מונע תוכן שמצטמצם מעבר לסליידר */
+    border-radius: 10px;
+    border: 2px solid #ffac80;
+    background-color: #1f1f1f;
+}
+
+.testimonials-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* אנימציה של הזזת הסליידר */
+    cursor: grab; /* שינוי סמן כשאפשר לגרור */
+}
+
+.testimonial {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #1f1f1f; /* רקע של כל ביקורת */
+    border-radius: 10px;
+    color: white; /* טקסט לבן */
+}
+
+.testimonial-content {
+    text-align: center;
+}
+
+.testimonial-text {
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 80%;
+    line-height: 1.5;
+    font-weight: 500;
+    display: flex; /* הוספת Flexbox */
+    justify-content: center; /* מרכז אופקית */
+    align-items: center; /* מרכז אנכית */
+    margin: 0 auto; /* מרכז את האלמנט עצמו */
+}
+
+.customer-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.customer-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.customer-details {
+    text-align: left;
+}
+
+.customer-name {
+    font-weight: bold;
+    color: #ffac80; /* שם הלקוח בצבע שונה */
+}
+
+.customer-company {
+    font-style: italic;
+    color: #bbb;
+}
+
+.customer-link {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+
+.dots-container {
+    position: relative;
+    bottom: -30px; /* המרחק מהסליידר */
+    left: 50%;
+    transform: translateX(-50%); /* מרכז את הנקודות מתחת לריבוע */
+    text-align: center;
+    width: 100%;
+    z-index: 10; /* אם הנקודות נעלמות מתחת למשהו, הוסף z-index */
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #ffac80; /* צבע פעיל של הנקודה */
+}
+
+/*------*/
+
+.contact-form {
+    width: 35%;
+    height: 27em;
+    margin: 5% auto;
+    position: relative;
+    background-color: #1f1f1f;
+    border: 2px solid #ffac80;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center; /* המרכזת את כל האלמנטים */
+    z-index: 1;
+}
+
+#contact-h1 {
+   position: relative;
+    font-family: 'Open Sans';
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+    font-size: 70px;
+    margin-top: 3em;
+    color: #FFFFFF;  
+    text-shadow: 0px 0px 11.9px rgba(255, 255, 255, 0.25);
+}
+
+.contact-form input {
+    background-color: white;
+    border: none;
+    width: 70%;
+    margin-right: auto;
+    padding: 12px 12px;
+    font-size: 15px;
+    border-radius: 50px;
+    font-family: 'Open Sans';
+    text-align: right;
+    margin-top: 30px;
+}
+
+.contact-form input:focus {
+  border: 2px solid #ffac80;
+}
+
+.contact-form input::placeholder {
+    text-align: right;
+}
+
+.contact-form textarea {
+    background-color: white;
+    width: 70%;
+    border: none;
+    height: 30%;
+    text-align: right;
+    margin-right: auto;
+    padding: 12px 12px;
+    border-radius: 22px;
+    margin-top: 30px;
+    font-size: 15px;
+    font-family: 'Open Sans';
+}
+
+.contact-form textarea:focus {
+  border: 2px solid #ffac80;
+}
+
+.contact-form textarea::placeholder {
+    text-align: right;
+}
+
+.contact-form input:focus-within {
+    outline: none;
+}
+
+.contact-form textarea:focus-within {
+    outline: none;
+} 
+
+.contact-form button {
+    position: relative;
+    background-color: #ffac80; /* Lighter shade on hover */
+    color: #fff;
+    cursor: pointer;
+    width: 146px;
+    height: 40px;
+    left: 26%;
+    margin-top: 30px;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.02em;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #ffffff00; /* Lighter shade on hover */
+    color: #ffffff;
+    border: solid #ffac80;
+    transform: scale(1.1);
+}
+
+#end-p {
+    text-align: center;
+    color: #ffffff;
+    font-size: 17px;
+    margin-top: 6%;
+}
+
+    </style>
+    
+<nav>
+    <button type="button">צור קשר</button>
+    <ul>
+        <li><a href="#faq">שאלות נפוצות</a></li>
+        <li><a href="#cards">שירותים</a></li>
+        <li><a href="#why-uss">בידול</a></li>
+        <li><a href="#about">קצת עליי</a></li>
+    </ul>
+    <a href="#">
+        <img src="ESTER-removebg-preview.png" alt="logo">
+    </a>
+</nav>
+
+<div class="home" id="home">
+    <h1 dir="auto">בניית אתרים ברמה הכי מקצועית שיש ובמחיר בדיחה!</h1>
+    <p dir="auto">בניית אתרים מקצועיים, באיכות ובמחירים בדיחה שלא תמצאו בשום מקום אחר. </p>
+    <img src="web-development.png" alt="design">
+    <button type="button">צור קשר</button>
+</div>
+
+<section id="about">
+    <div class="about">
+        <h1>קצת עליי</h1>
+        <p dir="auto">נעים מאוד! שמי אסתר גיגי בת 13. תלמידה בבית ספר חב”ד בחדרה ומתכנתת מעל ל5 שנים בשפות: HTML, Css ו- Java Script. למדתי גם סייבר, והיום אני נמצאת בתוכנית ארצית של כיתת ממר”ם, עם תעודת הסמכה של Oracle. בנוסף להכל, אני בונה אתרי תדמית לעסקים קטנים ולעסק כמו - שלך!
+        </p>
+    </div>
+</section>
+
+<section id="why-uss">
+<div class="why-us-section">
+    <h1 dir="auto">למה דווקא אצלי?</h1>
+    <div class="features-container">
+      <div class="feature">
+        <div class="icon">
+          <img src="עיצוב_ללא_שם__1_-removebg-preview (1).png" alt="Money Icon">
+        </div>
+        <h3>מחירים לכל כיס</h3>
+        <p dir="auto">המחירים של השירותים אצלנו נגישים ומתאימים לכולם.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">
+          <img src="עיצוב_ללא_שם-removebg-preview.png" alt="Trust Icon">
+        </div>
+        <h3>אמינות</h3>
+        <p dir="auto">אצלנו תמצאו אמינות ושירות מצוין לכל אורך הדרך.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">
+          <img src="עיצוב_ללא_שם-removebg-preview (1).png" alt="Service Icon">
+        </div>
+        <h3>שירות</h3>
+        <p dir="auto">השירות אצלנו עומד בסטנדרטים הגבוהים ביותר.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">
+          <img src="עיצוב_ללא_שם-removebg-preview (2).png" alt="Professional Icon">
+        </div>
+        <h3>דייקנות</h3>
+        <p dir="auto">אנו מתחייבים לשירות מקצועי ומדויק עבורכם.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cards">
+  <h1 id="cards-container-h1">מה אני עושה</h1>
+  <div class="cards-container">
+    <div class="card">
+
+      <h3>העלאת האתר</h3>
+      <p dir="auto">אני גם מעלה את האתר לאוויר כדי שאתם לא תצטרכו להסתבך עם הדברים האלו.</p>
+      <div class="iconn">
+        <img src="image 9.png" alt="Icon">
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>עיצוב אתרים</h3>
+      <p dir="auto">אני גם יכולה לעצב את הקופי של האתר שלכם שיהיה רלוונטי ומרהיב מאוד.</p>
+      <div class="iconn">
+        <img src="image 3.png" alt="Icon">
+      </div> 
+
+    </div>
+    <div class="card">
+      <h3>כתיבת קופי</h3>
+      <p dir="auto">אני גם יכולה לכתוב את הקופי של האתר שישדר את המסר בצורה ברורה.</p>
+      <div class="iconn">
+        <img src="image 8.png" alt="Icon">
+    </div>
+    </div>
+  </div>
+</section>
+
+  <h1 id="p-h1">תיק עבודות</h1>
+  <div class="portfolio">
+  <div class="theP">
+    <a href="https://impact-limitless.com/" target="_blank">
+      <img src="‏‏צילום מסך (9).png" alt="Portfolio" />
+    </a>
+  </div>
+    <div class="theP">
+    <a href="https://impact-limitless.com/" target="_blank">
+      <img src="Screenshot (105).png" alt="Portfolio"/>
+    </a>
+  </div>
+
+  </div>
+
+  <section id="faq">
+  <h1 id="faq-h1">שאלות נפוצות</h1>
+</section> 
+
+  <div class="faq">
+    <div class="faq-item">
+      <div class="faq-question">
+        <span class="plus" dir="auto">+</span> <h3>?איך זה הגיוני שלמדת כל כך הרבה שנים כשאת בת 13</h3>
+      </div>
+      <div class="faq-answer">
+        <p>אני התחלתי ללמוד תכנות כבר כשידעתי קרוא וכתוב בסביבות גיל 8 (בפלטפורמה סקראץ’ שאני גם עושה לה שיעורים פרטיים בזום לגילאים 8-9) ובגיל 10 כבר התחלתי עם פייתון וכו</p>
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <div class="faq-question">
+        <span class="plus">+</span> <h3>?כמה זמן לוקח לך לבנות אתר</h3>
+      </div>
+      <div class="faq-answer">
+        <p>זמן הבנייה תלוי במורכבות הפרויקט ובשיתוף הפעולה בינינו. בממוצע, פרויקט רגיל לוקח בין שבוע לחודש. חשוב לציין שככל שהשיתוף פעולה מצדכם יהיה מהיר ומדויק (כגון מתן ביקורות ושליחת תכנים בזמן), תהליך הבנייה יתבצע בצורה חלקה ויעילה יותר. כך אוכל להביא את האתר שלכם לתוצאה הטובה ביותר, ובזמן הקצר ביותר</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span class="plus">+</span> <h3>?האם את יודעת לבנות אתרים גם בוורדפרס</h3>
+      </div>
+      <div class="faq-answer">
+        <p dir="auto">כן, אני בונה אתרים גם בפלטפורמת וורדפרס. האתר הזה ספציפים בנוי ב: HTML, css, ו-JavaScript.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span class="plus">+</span> <h3>?האם את מספקת תמיכה לאחר סיום הפרויקט</h3>
+          </div>
+          <div class="faq-answer">
+        <p dir="auto">בשונה מאחרים, במקרה ונתקלת בבעיה\תקלה אפשר ליצור איתי קשר גם לאחר סיום הפרוייקט ואעזור בשמחה!</p>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+
+<!--slider-->
+<h1 id="testimonials-slider-h1">לקוחות ממליצים</h1>
+
+<div class="testimonials-slider">
+  <div class="testimonials-container">
+      <!-- ביקורת 1 -->
+      <div class="testimonial">
+          <div class="testimonial-content">
+              <p class="testimonial-text" dir="auto">האתר הזה עזר לנו להגדיל את העסק שלנו בצורה מדהימה. תודה רבה על שירות מקצועי!</p>
+              <div class="customer-info">
+                  <img src="https://impact-limitless.com/dan_picture.jpg" alt="תמונה של לקוח" class="customer-image">
+                  <div class="customer-details">
+                      <p class="customer-name">דן גיגי</p>
+                      <p class="customer-company" dir="auto">מייסד חברת Impact</p>
+                      <a href="https://impact-limitless.com" class="customer-link" target="_blank">בקר באתר</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- ביקורת 2 -->
+      <div class="testimonial">
+        <div class="testimonial-content">
+            <p class="testimonial-text" dir="auto">האתר הזה עזר לנו להגדיל את העסק שלנו בצורה מדהימה. תודה רבה על שירות מקצועי!</p>
+            <div class="customer-info">
+                <img src="https://impact-limitless.com/dan_picture.jpg" alt="תמונה של לקוח" class="customer-image">
+                <div class="customer-details">
+                    <p class="customer-name">דן גיגי</p>
+                    <p class="customer-company" dir="auto">מייסד חברת Impact</p>
+                    <a href="https://impact-limitless.com" class="customer-link" target="_blank">בקר באתר</a>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- הוספת עוד ביקורות -->
+  </div>
+</div>
+
+<div class="dots-container">
+  <!-- נקודות לניווט -->
+  <span class="dot active" onclick="moveSlide(0)"></span>
+  <span class="dot" onclick="moveSlide(1)"></span>
+  <!-- הוספת נקודות נוספות אם יש יותר ביקורות -->
+</div>
+
+<h1 id="contact-h1">יצירת קשר</h1>
+<section id="contact">
+  <div class="contact-form">
+      <form action="https://api.web3forms.com/submit" method="POST">
+          <br>
+          <input type="hidden" name="access_key" value="e198e91e-eebe-46a2-9d46-bbcd53f12851">
+          <input name="name" type="name" placeholder="לדוגמא: דני מזרחי " autocomplete="off">
+          <br>
+          <input name="email" type="email" placeholder="(: האימייל הכי יפה שלכם" autocomplete="off" required>
+          <br>
+          <textarea rows="5" cols="60" name="massage" id="massage" placeholder="...ההודעה שלכם" autocomplete="off" required></textarea>
+          <br>
+          <button type="submit">שליחה</button>
+          <div id="result"></div>
+      </form>
+  </div>
+</section>
+
+<p id='end-p' dir="auto">נבנה, תוכנת ועוצב ע"י אסתר גיגי כל הזכויות שמורות ©</p>
+<script>
+
+// קוד JavaScript להוספת הפעולה של פלוס ואיקס
+document.querySelectorAll('.faq-question').forEach(function(question) {
+    question.addEventListener('click', function() {
+        var faqItem = this.closest('.faq-item');
+        faqItem.classList.toggle('active');
+    });
+});
+
+//slider
+
+let isDragging = false;
+    let startPos = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
+    let slideIndex = 0;
+    const slidesWrapper = document.querySelector('.testimonials-container');
+    const slides = document.querySelectorAll('.testimonial');
+    const dots = document.querySelectorAll('.dot');
+
+    // התחל לגרור
+    slidesWrapper.addEventListener('mousedown', startDrag);
+    slidesWrapper.addEventListener('touchstart', startDrag);
+
+    // גרור את הקופסאות
+    slidesWrapper.addEventListener('mousemove', dragging);
+    slidesWrapper.addEventListener('touchmove', dragging);
+
+    // סיים לגרור
+    slidesWrapper.addEventListener('mouseup', endDrag);
+    slidesWrapper.addEventListener('touchend', endDrag);
+    slidesWrapper.addEventListener('mouseleave', endDrag);
+
+    // עדכון הנקודות
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            if (index === slideIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    // התחלת הגרירה
+    function startDrag(event) {
+        isDragging = true;
+        startPos = getPositionX(event);
+        slidesWrapper.style.transition = 'none';
+    }
+
+    // גרירה בפועל
+    function dragging(event) {
+        if (!isDragging) return;
+        const currentPos = getPositionX(event);
+        currentTranslate = prevTranslate + currentPos - startPos;
+        slidesWrapper.style.transform = `translateX(${currentTranslate}px)`;
+    }
+
+    // סיום הגרירה ועדכון
+    function endDrag() {
+        isDragging = false;
+        const movedBy = currentTranslate - prevTranslate;
+
+        // עדכון האינדקס לפי הכיוון
+        if (movedBy < -100 && slideIndex < slides.length - 1) {
+            slideIndex++;
+        }
+        if (movedBy > 100 && slideIndex > 0) {
+            slideIndex--;
+        }
+
+        setPositionByIndex();
+        updateDots();
+    }
+
+    // קבלת מיקום X
+    function getPositionX(event) {
+        return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+    }
+
+    // מיקום לפי האינדקס
+    function setPositionByIndex() {
+        currentTranslate = -slideIndex * slides[0].clientWidth;
+        prevTranslate = currentTranslate;
+        slidesWrapper.style.transition = 'transform 0.3s ease-in-out';
+        slidesWrapper.style.transform = `translateX(${currentTranslate}px)`;
+    }
+
+    // מעבר לתמונה על ידי לחיצה על נקודה
+    function goToSlide(index) {
+        slideIndex = index;
+        setPositionByIndex();
+        updateDots();
+    }
+
+    // תזוזה לתמונה קודמת או הבאה
+    function moveSlide(direction) {
+        if (direction === 1 && slideIndex < slides.length - 1) {
+            slideIndex++;
+        } else if (direction === -1 && slideIndex > 0) {
+            slideIndex--;
+        }
+        setPositionByIndex();
+        updateDots();
+    }
+
+    // עדכון ראשוני של הנקודות
+    updateDots();
+
+    </script>
+</body>
+</html>
