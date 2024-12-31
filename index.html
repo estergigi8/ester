@@ -34,18 +34,22 @@ nav {
     padding: 5px 40px; /* מרווח מהצדדים */
     box-sizing: border-box; /* הוספת box-sizing */
 }
+.closebtn {
+    display: none;
+}
 nav img {
     width: 50px;
     height: auto;
     margin-left: 5%;
 }
-nav ul{
+nav .menu{
     gap: 2em;
     display: flex;
     list-style: none;
     text-align: right;
+    align-items: center; /* הוספת align-items */
 }
-nav ul a{
+nav .menu a{
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
@@ -56,12 +60,12 @@ nav ul a{
     position: relative;
     cursor: pointer;
     text-decoration: none;
-    transition: .3s;
+    transition: 0.3s;
 }
-nav ul a:hover{
+nav .menu a:hover{
     color: #ffffff;
 }
-nav button{
+#ii{
     background-color: #ffac80; /* Lighter shade on hover */
     color: #fff;
     cursor: pointer;
@@ -79,7 +83,7 @@ nav button{
     letter-spacing: 0.02em;
     transition: background-color 0.3s, color 0.3s, transform 0.3s ease;
 }
-nav button:hover{
+#ii:hover{
     background-color: #ffffff00; /* Lighter shade on hover */
     color: #ffffff;
     border: solid #ffac80;
@@ -150,7 +154,8 @@ nav button:hover{
     transform: scale(1.1);
 }
 .about{
-    margin: 10% 0;
+    margin: 5% 0;
+    margin-top: 13%;
     justify-items: center;
 }
 .about h1 {
@@ -185,7 +190,7 @@ nav button:hover{
 
 .why-us-section {
   text-align: center;
-  padding: 50px 20px;
+  padding: 20px 20px;
 }
 
 .why-us-section h1 {
@@ -200,43 +205,36 @@ nav button:hover{
 }
 
 .features-container {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
 }
-
 .feature {
-  text-align: center;
-  max-width: 200px;
+    text-align: center;
+    max-width: 200px;
 }
-
 .feature-icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 15px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
 }
-
 .feature h3 {
-  color: #ffffff;
-  font-size: 30px;
-  margin: 10px 0;
+    color: #ffffff;
+    font-size: 30px;
+    margin: 10px 0;
 }
-
 .feature p {
-  font-size: 15.5px;
-  letter-spacing: 0.06em;
-  color: #ffffff;
-  margin: 0;
+    font-size: 15.5px;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    margin: 0;
 }
-
 .icon img {
     width: 80px;
     filter: drop-shadow(0px 0px 70px #FFFFFF);
 
 }
-
-
 #cards-container-h1 {
     position: relative;
     font-family: 'Open Sans';
@@ -640,20 +638,265 @@ nav button:hover{
     font-size: 17px;
     margin-top: 6%;
 }
+.menu-toggle {
+    display: none;
+}
+.closebtn {
+    display: none;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.975); /* מלבן לבן */
+        height: 60px;
+        padding: 0 10px; /* רווחים פנימיים */
+        width: 100%; /* מלא רוחב */
+        border-radius: 0; /* ביטול קצוות מעוגלים */
+        position: fixed; /* מיקום קבוע כדי להיות צמוד למעלה */
+        top: 0;
+        left: 0; /* מוודא שה-nav מתחיל מהצד השמאלי */
+        box-sizing: border-box; /* מוודא שה-padding נכלל ברוחב */
+        margin: 0vh auto;
+        z-index: 1000; /* מאפשר לתפריט להופיע מעל לתוכן אחר */
+    }
+    
+    #ii {
+        display: none; 
+    }
+    
+    nav .logo img {
+        height: 40px; /* גובה מותאם ללוגו */
+        display: block;
+    }
+    
+    nav .menu {
+        position: fixed; /* מיקום קבוע */
+        top: -4vh; /* מתחיל מלמעלה */
+        left: 0; /* מתחיל מהצד השמאלי */
+        width: 100%; /* רוחב מלא */
+        height: auto; /* גובה אוטומטי כדי להתאים לתוכן */
+        background-color: rgba(0, 0, 0, 0.836); /* רקע כהה עם שקיפות */
+        overflow: hidden; /* הסתרת תוכן שעולה על הגבול */
+        display: flex; /* שימוש ב-flexbox */
+        flex-direction: column; /* כיווניות אנכית */
+        align-items: center; /* מרכז את התוכן אופקית */
+        justify-content: center; /* מרכז את התוכן אנכית */
+        transition: height 0.5s ease; /* אנימציה לפתיחה */
+        z-index: 999; /* הוצא את התפריט מעל התוכן */
+        padding-top: 20px; /* מרווח מעל התפריט כולו */
+    }
+    
+    nav .menu li {
+        margin: 20px 0; /* מרווח של 20 פיקסלים בין הפריטים */
+        list-style: none;
+    }
+    
+    nav .menu a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    
+    
+    nav .menu a:hover {
+        color: #f1f1f1; /* צבע בעת ריחוף */
+    }
+    
+    nav .menu a.active {
+        color: #ffffff; /* צבע לבן לקישור הנבחר */
+    }
+    
+    nav .closebtn {
+        position: absolute;
+        top: -15vh; /* מיקום מלמעלה */
+        right: -10vh; /* מיקום מצד ימין */
+        font-size: 100px; /* גודל טקסט גדול יותר */
+        color: #818181; /* צבע של איקס */
+        cursor: pointer;
+        transition: color 0.3s; /* אנימציה לשינוי צבע */
+    }
+    
+    nav .closebtn:hover {
+        color: #f1f1f1; /* צבע בעת ריחוף */
+    }
+    .menu-toggle {
+        display: block;
+        background: none; /* הסרת רקע */
+        border: none; /* הסרת גבול */
+        color: #e9ae89; /* צבע של שלושת הקווים */
+        font-size: 30px; /* גודל של שלושת הקווים */
+        cursor: pointer; /* מצביע על כך שזה לחצן */
+    }
+    .home h1 {
+        font-size: 50px;
+        width: 90%;
+        left: 5%;
+        line-height: 70px;
+    }
+
+    .home p {
+        width: 90%;
+        left: 5%;
+        margin-top: 15%;
+        font-size: 16px;
+    }
+
+    .home img {
+        display: none;
+    }
+
+    .home button {
+        width: 100%;
+        left: 61%;
+        top: 45px;
+        width: 133px;
+        height: 42px;
+    }
+
+    .about h1 {
+        font-size: 45px;
+        margin-top: 40%;
+        width: 100%;
+    }
+
+    .about p {
+        width: 80%;
+        margin: 5% auto;
+        text-align: center;
+        font-size: 18px;
+        line-height: 50px;
+    }
+
+    .why-us-section h1 {
+        font-size: 45px;
+    }
+
+
+    #cards-container-h1 {
+        font-size: 45px;
+        margin-top: 30%;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .card {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .card h3 {
+        font-size: 24px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .iconn img {
+        width: 100px;
+    }
+    #p-h1 {
+        display: none;
+    }
+    .portfolio {
+        display: none;
+    }
+    #faq-h1 {
+        font-size: 45px;
+        margin-top: 30%;
+    }
+    .faq {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .faq-question h3 {
+        font-size: 16px;
+        text-align: right;
+    }
+
+    .faq-answer {
+        font-size: 14px;
+    }
+    #testimonials-slider-h1 {
+        font-size: 45px;
+        margin-top: 30%;
+    }
+    .testimonials-slider {
+        margin-top: 15%;
+        width: 80%;
+        height: auto;
+    }
+
+    .testimonial-text {
+        font-size: 14px;
+    }
+    .dots-container {
+        bottom: -20px; /* המרחק מהסליידר */
+    }
+    .dot {
+        height: 10px;
+        width: 10px;
+        margin: 0 5px;
+    }
+    #contact-h1 {
+        font-size: 45px;
+        margin-top: 30%;
+    }
+    .contact-form {
+        margin: 10% auto;
+        width: 85%;
+        height: auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        margin-top: 20px;
+        width: 70%;
+    }
+
+    .contact-form button {
+        width: 40%;
+        left: 18%;
+        margin: 20px 0;
+    }
+
+    #end-p {
+        font-size: 14px;
+        margin-top: 10%;
+    }
+}
+
 
     </style>
     
 <nav>
-    <button type="button">צור קשר</button>
-    <ul>
+    <button type="button" id="ii">צור קשר</button>
+    
+    <ul id="myNav" class="menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="font-size: 40px;">&times;</a>
         <li><a href="#faq">שאלות נפוצות</a></li>
         <li><a href="#cards">שירותים</a></li>
         <li><a href="#why-uss">בידול</a></li>
         <li><a href="#about">קצת עליי</a></li>
     </ul>
     <a href="#">
-        <img src="ESTER-removebg-preview.png" alt="logo">
+        <img src="ESTER-removebg-preview.png" alt="logo" onclick="refreshPage()">
     </a>
+    <button type="button" class="menu-toggle" onclick="openNav()">&#9776;</button>
 </nav>
 
 <div class="home" id="home">
@@ -708,7 +951,7 @@ nav button:hover{
 </section>
 
 <section id="cards">
-  <h1 id="cards-container-h1">מה אני עושה</h1>
+  <h1 id="cards-container-h1" dir="auto">מה אני עושה?</h1>
   <div class="cards-container">
     <div class="card">
 
@@ -972,6 +1215,27 @@ let isDragging = false;
     // עדכון ראשוני של הנקודות
     updateDots();
 
+    function openNav() {
+    document.getElementById("myNav").style.height = "100%"; // פותח את התפריט
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.height = "0"; // סוגר את התפריט
+    }
+
+    // תחילה, סוגר את התפריט
+    document.addEventListener("DOMContentLoaded", function() {
+        closeNav(); // סוגר את התפריט כשעמוד נטען
+    });
+
+
+
+
+    //רענון הדף כאשר לוחצים על הלוגו
+
+    function refreshPage() {
+        location.reload();
+    }
     </script>
 </body>
 </html>
