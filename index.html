@@ -17,8 +17,8 @@ body {
     padding: 0;
     margin: 0;
     background-color: #111111;
-    font-family: 'Open Sans';
-    box-sizing: border-box; /* הוספת box-sizing */
+    font-family: 'Open Sans';/* 
+    box-sizing: border-box; הוספת box-sizing */
 }
 
 nav {
@@ -654,7 +654,7 @@ nav .menu a:hover{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.975); /* מלבן לבן */
+        background-color: rgba(0, 0, 0, 0.975);
         height: 60px;
         padding: 0 10px; /* רווחים פנימיים */
         width: 100%; /* מלא רוחב */
@@ -663,7 +663,7 @@ nav .menu a:hover{
         top: 0;
         left: 0; /* מוודא שה-nav מתחיל מהצד השמאלי */
         box-sizing: border-box; /* מוודא שה-padding נכלל ברוחב */
-        margin: 0vh auto;
+        margin: 0 auto;
         z-index: 1000; /* מאפשר לתפריט להופיע מעל לתוכן אחר */
     }
     
@@ -678,7 +678,7 @@ nav .menu a:hover{
     
     nav .menu {
         position: fixed; /* מיקום קבוע */
-        top: -4vh; /* מתחיל מלמעלה */
+        top: -5.1vh; /* מתחיל מלמעלה */
         left: 0; /* מתחיל מהצד השמאלי */
         width: 100%; /* רוחב מלא */
         height: auto; /* גובה אוטומטי כדי להתאים לתוכן */
@@ -687,6 +687,8 @@ nav .menu a:hover{
         display: flex; /* שימוש ב-flexbox */
         flex-direction: column; /* כיווניות אנכית */
         align-items: center; /* מרכז את התוכן אופקית */
+        text-align: center; /* מרכז את הטקסט אופקית */
+        align-content: center;
         justify-content: center; /* מרכז את התוכן אנכית */
         transition: height 0.5s ease; /* אנימציה לפתיחה */
         z-index: 999; /* הוצא את התפריט מעל התוכן */
@@ -718,7 +720,7 @@ nav .menu a:hover{
     
     nav .closebtn {
         position: absolute;
-        top: -15vh; /* מיקום מלמעלה */
+        top: 0vh; /* מיקום מלמעלה */
         right: -10vh; /* מיקום מצד ימין */
         font-size: 100px; /* גודל טקסט גדול יותר */
         color: #818181; /* צבע של איקס */
@@ -1216,7 +1218,7 @@ let isDragging = false;
     updateDots();
 
     function openNav() {
-    document.getElementById("myNav").style.height = "100%"; // פותח את התפריט
+    document.getElementById("myNav").style.height = "103%"; // פותח את התפריט
     }
 
     function closeNav() {
