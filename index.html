@@ -101,7 +101,7 @@ nav .menu a:hover{
     line-height: 100px;
     width: 35%;
     left: 50%;
-    top: 80px;
+    top: 130px;
     text-align: right;  
     color: #FFFFFF;  
     text-shadow: 0px 0px 11.9px rgba(255, 255, 255, 0.25);
@@ -109,7 +109,7 @@ nav .menu a:hover{
 .home p {
     position: relative;
     left: 60%;
-    top: 35px;
+    top: 90px;
     width: 25%;
     font-family: 'Open Sans';
     font-style: normal;
@@ -123,9 +123,9 @@ nav .menu a:hover{
 .home img {
     display: inline-flex;
     position: absolute;
-    top: 18%;
+    top: 25%;
     left: 17%;
-    width: 45vh;
+    width: 50vh;
 }
 .home button {
     position: relative; /* הוסיפי את זה */
@@ -135,7 +135,7 @@ nav .menu a:hover{
     width: 135px;
     height: 45px;
     left: 78%; /* יפעל כעת */
-    top: 48px; /* יפעל כעת */
+    top: 98px; /* יפעל כעת */
     border: none;
     border-radius: 50px;
     font-family: 'Open Sans';
@@ -153,11 +153,14 @@ nav .menu a:hover{
     border: solid #ffac80;
     transform: scale(1.1);
 }
-.about{
-    margin: 5% 0;
+.about {
+    margin: 3% 0;
     margin-top: 13%;
     justify-items: center;
+    overflow: hidden;
+    height: 700px;
 }
+
 .about h1 {
     justify-items: center;
     position: relative;
@@ -169,21 +172,29 @@ nav .menu a:hover{
     color: #FFFFFF;  
     text-shadow: 0px 0px 11.9px rgba(255, 255, 255, 0.25);
 }
-.about p {
+
+.about-content {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.about-content img {
+    width: 45vh;
+    margin-right: 20px; /* Adjust as needed */
+}
+
+.about-content p {
     width: 30%;
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 23px;
     line-height: 65px;
-    margin-right: 15%;
-    margin-top: 5%;
-    justify-self: right;
-    text-align: right;
     letter-spacing: 0.04em;
     color: #FFFFFF;
 }
-
 
 
 
@@ -225,7 +236,7 @@ nav .menu a:hover{
     margin: 10px 0;
 }
 .feature p {
-    font-size: 15.5px;
+    font-size: 15px;
     letter-spacing: 0.06em;
     color: #ffffff;
     margin: 0;
@@ -645,7 +656,6 @@ nav .menu a:hover{
     display: none;
 }
 
-/* Mobile styles */
 @media only screen and (max-width: 600px) {
     body {
         font-size: 14px;
@@ -742,6 +752,7 @@ nav .menu a:hover{
     .home h1 {
         font-size: 50px;
         width: 90%;
+        top: 80px;
         left: 5%;
         line-height: 70px;
     }
@@ -749,6 +760,7 @@ nav .menu a:hover{
     .home p {
         width: 90%;
         left: 5%;
+        top: 40px;
         margin-top: 15%;
         font-size: 16px;
     }
@@ -765,18 +777,27 @@ nav .menu a:hover{
         height: 42px;
     }
 
+    .about {
+
+        height: auto;
+    }
+
     .about h1 {
         font-size: 45px;
         margin-top: 40%;
         width: 100%;
     }
 
-    .about p {
+    .about-content p {
         width: 80%;
-        margin: 5% auto;
+        margin: 3% auto;
         text-align: center;
         font-size: 18px;
         line-height: 50px;
+    }
+
+    .about-content img {
+        display: none;
     }
 
     .why-us-section h1 {
@@ -881,10 +902,8 @@ nav .menu a:hover{
         margin-top: 10%;
     }
 }
-
-
     </style>
-    
+
 <nav>
     <button type="button" id="ii">צור קשר</button>
     
@@ -911,8 +930,11 @@ nav .menu a:hover{
 <section id="about">
     <div class="about">
         <h1>קצת עליי</h1>
+    <div class="about-content">
+        <img src="עיצוב ללא שם.png" alt="about">
         <p dir="auto">נעים מאוד! שמי אסתר גיגי בת 13. תלמידה בבית ספר חב”ד בחדרה ומתכנתת מעל ל5 שנים בשפות: HTML, Css ו- Java Script. למדתי גם סייבר, והיום אני נמצאת בתוכנית ארצית של כיתת ממר”ם, עם תעודת הסמכה של Oracle. בנוסף להכל, אני בונה אתרי תדמית לעסקים קטנים ולעסק כמו - שלך!
         </p>
+    </div>
     </div>
 </section>
 
@@ -925,28 +947,28 @@ nav .menu a:hover{
           <img src="עיצוב_ללא_שם__1_-removebg-preview (1).png" alt="Money Icon">
         </div>
         <h3>מחירים לכל כיס</h3>
-        <p dir="auto">המחירים של השירותים אצלנו נגישים ומתאימים לכולם.</p>
+        <p dir="auto">מחירים עם הבדלים של 60% ואפילו יותר לעומת מה שהולך עכשיו בשוק. הסיבות למחירים הנמוכים אצלי היא בעיקר כי אני צעירה ורוצה לצבור תיק עבודות.</p>
       </div>
       <div class="feature">
         <div class="icon">
           <img src="עיצוב_ללא_שם-removebg-preview.png" alt="Trust Icon">
         </div>
         <h3>אמינות</h3>
-        <p dir="auto">אצלנו תמצאו אמינות ושירות מצוין לכל אורך הדרך.</p>
+        <p dir="auto">אני יכולה להגיד על עצמי שאני ישרה מאוד ותמיד יש מאחורי אנשים שאני יכולה להתייעץ איתם ולשאול אותם כשאני נתקעת בבעיה.</p>
       </div>
       <div class="feature">
         <div class="icon">
           <img src="עיצוב_ללא_שם-removebg-preview (1).png" alt="Service Icon">
         </div>
         <h3>שירות</h3>
-        <p dir="auto">השירות אצלנו עומד בסטנדרטים הגבוהים ביותר.</p>
+        <p dir="auto">אשתדל תמיד להיות זמינה לכל שאלה/בקשה שתצטרכו גם לאחר סיום הפרוייקט ולתת לכם את השירות הטוב ביותר.</p>
       </div>
       <div class="feature">
         <div class="icon">
           <img src="עיצוב_ללא_שם-removebg-preview (2).png" alt="Professional Icon">
         </div>
         <h3>דייקנות</h3>
-        <p dir="auto">אנו מתחייבים לשירות מקצועי ומדויק עבורכם.</p>
+        <p dir="auto">בין לטוב ולרע אני פרפקציוניסטית ברמות ולא יכולה כמשהו לא מושלם בדיוק במקום המתאים איך שאני רוצה (:</p>
       </div>
     </div>
   </div>
@@ -958,23 +980,23 @@ nav .menu a:hover{
     <div class="card">
 
       <h3>העלאת האתר</h3>
-      <p dir="auto">אני גם מעלה את האתר לאוויר כדי שאתם לא תצטרכו להסתבך עם הדברים האלו.</p>
+      <p dir="auto">אני מעלה לכם את האתר לאוויר כדי שאתם לא תצטרכו להסתבך עם הדברים האלו.</p>
       <div class="iconn">
         <img src="image 9.png" alt="Icon">
       </div>
     </div>
 
     <div class="card">
-      <h3>עיצוב אתרים</h3>
-      <p dir="auto">אני גם יכולה לעצב את הקופי של האתר שלכם שיהיה רלוונטי ומרהיב מאוד.</p>
+      <h3>כתיבת קופי</h3>
+      <p dir="auto">אני יכולה לכתוב את הקופי של האתר שישדר את המסר בצורה ברורה וחדה שתקפיץ לכם את האתר.</p>
       <div class="iconn">
         <img src="image 3.png" alt="Icon">
       </div> 
 
     </div>
     <div class="card">
-      <h3>כתיבת קופי</h3>
-      <p dir="auto">אני גם יכולה לכתוב את הקופי של האתר שישדר את המסר בצורה ברורה.</p>
+      <h3>עיצוב האתר</h3>
+      <p dir="auto">בנוסף, אני גם מעצבת לכם את האתר שיהיה הכי הכי יפה שאפשר, להוציא ממנו את המקסימום!</p>
       <div class="iconn">
         <img src="image 8.png" alt="Icon">
     </div>
@@ -1107,7 +1129,6 @@ nav .menu a:hover{
 
 <p id='end-p' dir="auto">נבנה, תוכנת ועוצב ע"י אסתר גיגי כל הזכויות שמורות ©</p>
 <script>
-
 // קוד JavaScript להוספת הפעולה של פלוס ואיקס
 document.querySelectorAll('.faq-question').forEach(function(question) {
     question.addEventListener('click', function() {
@@ -1117,8 +1138,7 @@ document.querySelectorAll('.faq-question').forEach(function(question) {
 });
 
 //slider
-
-let isDragging = false;
+    let isDragging = false;
     let startPos = 0;
     let currentTranslate = 0;
     let prevTranslate = 0;
